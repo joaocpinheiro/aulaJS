@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Curso Javascript Completo 2018</title>
+        <meta charset="utf-8">
+        <style>
+            #txtNome{
+                border: 2px solid red;
+            }
+
+            .alterar{
+                border: 2px solid red;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Curso Javascript Completo 2018</h1>
+        
+        <input type ="text" id="txtNome" id="txtNome" value=""><button onclick="document.querySelector('#msg').classList.add('alterar'), escreve()">só clica</button>
+        <div id="msg"></div>
+
+        
+        <script>
+            
+            var txtnome = document.querySelector('#txtNome');
+            function escreve(){
+                var nome = txtnome.value;
+                document.querySelector('#msg').innerHTML = 'Seja bem-vindo, <b>' +nome+'</b'
+            }
+
+           
+
+
+        </script>
+        
+    </body>
+</html>
