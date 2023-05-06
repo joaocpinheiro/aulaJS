@@ -3,88 +3,48 @@
     <head>
         <title>Logica de Programação Javascript</title>
         <meta charset="utf-8">
+        
+        <style>
+            .destaque{
+                background: yellow;
+                color: blue;
+            }
+
+
+
+        </style>
 
 
     </head>
     <body>
 
-        <div class="container">
-            <h1>Curso Javascript Completo</h1>
-            <input type="text" id="txtTask">
-            <button id="btn">Cadastrar tarefa</button>
-            <ul>
-                <li>estudar Javascript - DOM</li>
-                <li>estudar eventos em Javascript</li>
-                <li>jogar video-game</li>
-            </ul>
-            <button id="clear">Apagar tudo</button>
-
-        
+        <div id="container">
+                <p></p>  
+                <button>chama data</button>         
         </div>
+        
+        
         
         <script>
 
-    (function(){
-        'use strict'
+            (function(){
+                var data = Date();
+                function hora(){
 
-        var $ul = document.querySelector('ul');
-        var $lis = $ul.querySelector('li');
-        var $lisall = $ul.querySelectorAll('li')
-        var $txtTask = document.querySelector('#txtTask');
-        var $btn = document.querySelector('#btn');
-        var $clear = document.querySelector('#clear')
 
-        $btn.addEventListener('click', addTask);
-        $txtTask.addEventListener('keyup', function (e){
-            if( e.keyCode ===13 ){
-                addTask()
-            }
-        })
-
-        $clear.addEventListener('click', function(e){
-            if(e.target.id === 'clear'){
-                removeTudo()
-            }
-        
-
-        })
-
-        $ul.addEventListener('click', function(e){
-            if(e.target.nodeName === 'LI'){
-                removeTask(e.target);
-            }
-        })
-
-        function removeTudo(){
-            var lisAll = document.querySelectorAll('li');
-            for (var i = lisAll.length - 1; i >= 0; i--) {
-            var li = lisAll[i];
-            li.parentNode.removeChild(li);
-            }
-        }
-            
-        
-        function removeTask(li){
-            if(confirm('deseja realmente excluir a tarefa \n"' + li.textContent + '"?')){
-                li.parentNode.removeChild(li)
-            }
-
-        }
-        
-        function addTask(){
-            if($txtTask.value !== ''){
-                var li = document.createElement('li');
-                var text = document.createTextNode($txtTask.value);
-                li.appendChild(text);
-                $ul.appendChild(li);
-                $txtTask.value = ''
-                $txtTask.focus();
                 }
-            }
-
-    }())
+                
 
 
+
+
+            })
+            
+            
+
+
+            
+            
         </script>
     </body>
     
